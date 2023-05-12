@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>게시판</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+</head>
+<body>
+
+<div>
+    <a th:replace="fragments/bodyHeader.html" href="/">
+    </a>
+</div>
+
+<div class="container mx-auto max-w-2xl">
+    <div class="py-5 text-center">
+        <h2 class="text-3xl font-bold">갤러리</h2>
+    </div>
+
+    <div class="flex justify-end my-4">
+        <button onclick="location.href='create'" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+            글 등록
+        </button>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="my-4">
+        <table class="w-full border">
+            <thead>
+            <tr class="bg-gray-50 border-b">
+                <th class="p-2 border-r">#</th>
+                <th class="p-2 border-r">제목</th>
+                <th class="p-2 border-r">작성자</th>
+                <th class="p-2 border-r">조회수</th>
+                <th class="p-2">등록일</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="bg-white border-b">
+                <td class="p-2 border-r">글 ID</td>
+                <td class="p-2 border-r"><a href="http://localhost:8080">제목</a></td>
+                <td class="p-2 border-r">작성자</td>
+                <td class="p-2 border-r">조회수</td>
+                <td class="p-2">등록일</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <form>
+        <div class="flex items-center">
+            <select class="p-2 mr-2 text-gray-600 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                <option value="">option</option>
+                <option value="option1">option1</option>
+                <option value="option2">option2</option>
+            </select>
+            <input type="text" class="p-2 mr-2 text-gray-600 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" size="50">
+            <button type="submit" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50" >검색</button>
+        </div>
+    </form>
+
+</div> <!-- /container -->
+
+</body>
+</html>
